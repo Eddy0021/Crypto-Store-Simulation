@@ -331,14 +331,7 @@ namespace OfflineCryptocurrencyExchange
             // Make the X axis.
             GeometryGroup xaxis_geom = new GeometryGroup();
             xaxis_geom.Children.Add(new LineGeometry(
-                new Point(0, 90), new Point(can.Width, 90)));
-            //for (double x = xmin + step;
-            //    x <= canv1.Width - step; x += step)
-            //{
-            //    xaxis_geom.Children.Add(new LineGeometry(
-            //        new Point(x, ymax - margin / 2),
-            //        new Point(x, ymax + margin / 2)));
-            //}   
+                new Point(0, 90), new Point(can.Width, 90)));          
 
             Path xaxis_path = new Path();
             xaxis_path.StrokeThickness = 0.5;
@@ -350,13 +343,7 @@ namespace OfflineCryptocurrencyExchange
             // Make the Y ayis.
             GeometryGroup yaxis_geom = new GeometryGroup();
             yaxis_geom.Children.Add(new LineGeometry(
-                new Point(xmin, 0), new Point(xmin, can.Height)));
-            //for (double y = step; y <= canv1.Height - step; y += step)
-            //{
-            //    yaxis_geom.Children.Add(new LineGeometry(
-            //        new Point(xmin - margin / 2, y),
-            //        new Point(xmin + margin / 2, y)));
-            //}     
+                new Point(xmin, 0), new Point(xmin, can.Height)));        
 
             Path yaxis_path = new Path();
             yaxis_path.StrokeThickness = 1;
@@ -377,19 +364,6 @@ namespace OfflineCryptocurrencyExchange
             polyline.Points = points;
 
             can.Children.Add(polyline);
-
-            //pts.Add(new Point(10, 90));
-            //pts.Add(new Point(20, 62));
-            //pts.Add(new Point(30, 65));
-            //pts.Add(new Point(40, 67));
-            //pts.Add(new Point(50, 114));
-            //pts.Add(new Point(70, 70));
-
-
-
-
-
-
         }
 
         public void ShowProfit(TextBox tb_Profit, ComboBox cb_Stoinks) // SHOW THE PROFIT IN THE SELECTED CURRENCY 

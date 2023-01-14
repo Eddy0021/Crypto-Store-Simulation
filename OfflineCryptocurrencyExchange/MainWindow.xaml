@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OfflineCryptocurrencyExchange"
         mc:Ignorable="d"
-        Title="Offline Crypto Exchange Program By Eddy" Height="450" Width="657.833" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+        Title="Offline Crypto Exchange Program By Eddy" Height="450" Width="763.833" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
     <Grid>
         <TextBox x:Name="tb_From" HorizontalAlignment="Left" Height="23" Margin="136,26,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="140" GotFocus="Tb_From_GotFocus" TextChanged="Tb_From_TextChanged"/>
         <ComboBox x:Name="cb_From" HorizontalAlignment="Left" Margin="79,26,0,0" VerticalAlignment="Top" Width="57" SelectionChanged="Cb_From_SelectionChanged"/>
@@ -13,9 +13,6 @@
         <Button Content="Buy" HorizontalAlignment="Left" Margin="520,20,0,0" VerticalAlignment="Top" Width="101" Height="32" Click="Button_Click"/>
         <Label Content="From" HorizontalAlignment="Left" Margin="182,2,0,0" VerticalAlignment="Top"/>
         <Label Content="To" HorizontalAlignment="Left" Margin="400,0,0,0" VerticalAlignment="Top"/>
-        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="134" Margin="324,77,0,0" VerticalAlignment="Top" Width="287">
-            <ListBox x:Name="lb_OwnedCurrency"/>
-        </Border>
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="299" Margin="10,77,0,0" VerticalAlignment="Top" Width="296">
             <ListBox x:Name="lb_CurrenciesCurrentValue"/>
         </Border>
@@ -27,12 +24,26 @@
         <Label Content="Stoink" HorizontalAlignment="Left" Margin="355,376,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
         <TextBox x:Name="tb_Profit" HorizontalAlignment="Left" Height="23" Margin="430,386,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
         <TextBox x:Name="tb_To" HorizontalAlignment="Left" Height="23" Margin="356,27,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" GotFocus="Tb_To_GotFocus" TextChanged="Tb_To_TextChanged"/>
-        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="150" Margin="324,226,0,0" VerticalAlignment="Top" Width="287">
-            <Canvas x:Name="canvans1" HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="267" Margin="9,9,0,0"/>
-        </Border>
         <ComboBox x:Name="cb_Stoinks" HorizontalAlignment="Left" Margin="550,386,0,0" VerticalAlignment="Top" Width="61" SelectionChanged="Cb_Stoinks_SelectionChanged"/>
         <Label x:Name="lb_timerTest" Content="0" HorizontalAlignment="Left" Margin="265,350,0,0" VerticalAlignment="Top"/>
         <Label Content="Stack refresh in:" HorizontalAlignment="Left" Margin="189,352,0,0" VerticalAlignment="Top" FontSize="10"/>
+        <TabControl HorizontalAlignment="Left" Height="289" Margin="317,82,0,0" VerticalAlignment="Top" Width="431">
+            <TabItem Header="TabItem">
+                <ScrollViewer HorizontalScrollBarVisibility="Visible">
+                    <Grid Background="#FFE5E5E5" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Disabled">
+                        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="134" Margin="10,10,0,0" VerticalAlignment="Top" Width="287">
+                            <ListBox x:Name="lb_OwnedCurrency"/>
+                        </Border>
+                        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="150" Margin="10,158,0,0" VerticalAlignment="Top" Width="287">
+                            <Canvas x:Name="canvans1" HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="267" Margin="9,9,0,0"/>
+                        </Border>
+                    </Grid>
+                </ScrollViewer>
+            </TabItem>
+            <TabItem Header="History">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+        </TabControl>
 
     </Grid>
 </Window>
